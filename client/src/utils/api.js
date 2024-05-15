@@ -13,14 +13,14 @@ export const fetchDataFromApi = async (url) => {
     );
     return data;
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
     return error;
   }
 };
 
 export const makePaymentRequest = axios.create({
-  baseURL: process.env.REACT_APP_STRIPE_DEV_URL,
+  baseURL: process.env.REACT_APP_DEV_URL,
   headers: {
-    Authorization: "bearer " + process.env.REACT_APP_STRIPE_APP_KEY,
+    Authorization: "bearer" + process.env.REACT_APP_STRIPE_APP_KEY,
   },
 });

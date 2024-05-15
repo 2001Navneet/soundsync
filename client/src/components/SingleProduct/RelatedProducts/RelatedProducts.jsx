@@ -7,6 +7,7 @@ const RelatedProducts = ({ productId, categoryId }) => {
   return (
     <div className="related-products">
       <Products headingText="Related Products" products={data} />
+      <div>image is not shown</div>
     </div>
   );
 };

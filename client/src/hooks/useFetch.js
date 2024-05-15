@@ -6,12 +6,11 @@ const useFetch = (endpoint) => {
   useEffect(() => {
     makeApiCall();
   }, [endpoint]);
-
   const makeApiCall = async () => {
     const res = await fetchDataFromApi(endpoint);
     setData(res);
+    console.log(res);
   };
-
   return { data };
 };
 export default useFetch;

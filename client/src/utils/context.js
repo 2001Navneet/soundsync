@@ -8,6 +8,8 @@ const AppContext = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [cartsubtotal, setCartSubtotal] = useState(0);
+  // testing
+  const [data, setData] = useState();
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -65,6 +67,8 @@ const AppContext = ({ children }) => {
         handleAddToCart,
         handleRemoveFromCart,
         handleCartProductQuantity,
+        data,
+        setData,
       }}
     >
       {children}

@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="col">
           <div className="title">About</div>
           <div className="text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
-            officia optio veniam.
+            Discover premium audio gear and stylish accessories for your
+            lifestyle at our online store.
           </div>
         </div>
         <div className="col">

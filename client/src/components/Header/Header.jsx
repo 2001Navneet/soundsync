@@ -10,6 +10,7 @@ import { Context } from "../../utils/context";
 
 import "./Header.scss";
 const Header = () => {
+  const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
   const [scrolled, setScrolled] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -32,11 +33,23 @@ const Header = () => {
         <div className="header-content">
           <ul className="left">
             <li onClick={() => navigate("/")}>Home</li>
-            <li>About</li>
+            <li onClick={() => navigate("/about")}>About</li>
             <li>Category</li>
+            {isAuthenticated ? (
+              <button className="login-btn" onClick={(e) => logout()}>
+                Logout
+              </button>
+            ) : (
+              <button
+                className="login-btn"
+                onClick={(e) => loginWithRedirect()}
+              >
+                Login with redirect
+              </button>
+            )}
           </ul>
           <div className="center" onClick={() => navigate("/")}>
-            Navshop
+            <span id="web">Wireless</span>Web
           </div>
           <div className="right">
             <TbSearch onClick={() => setShowSearch(true)} />
