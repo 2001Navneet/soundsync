@@ -1,3 +1,3 @@
 [submodule "api"]
     path = api
-    url = https://github.com/2001Navneet/soundsync.git
+    url = https://github.com/2001Navneet/soundsync/tree/b6cee5431f72729c062091dc5c0ab3397789a969
